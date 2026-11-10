@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <script type="text/javascript" src="./script.js">
-</script>
+    
 
 	  <input id="name" name="name">
 	  <input id="year" name="year">
 	  <button id="button">Submit </button>
 	  <h3 id="url">https://localhost:8080/</h3>
-	 
+
+	  <script type="text/javascript" src="./script.js">
+		  const  name = document.getElementById("name")
+		  const  year = document.getElementById("year")
+		  const  button = document.getElementById("button")
+		  const  url = document.getElementById("url")
+
+		  button.addEventListener('click',function() {
+				const userName = name.value;
+			    const userYear = year.value;
+
+			    url.textContext  = `https://localhost:8080/${userName}/${userYear}/`
+		  });
+</script>
 	  
   </body>
 
